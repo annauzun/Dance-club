@@ -100,7 +100,6 @@ a {
     position: absolute;
     background-color: rgba(16, 16, 16);
     opacity: 62%;
-    width: 58%;
     height: 100%;
     display: flex;
 }
@@ -256,8 +255,7 @@ h3 {
     width: 100%;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 
 .button {
@@ -276,35 +274,34 @@ h3 {
     color: var(--color-white);
     background-color: var(--color-orange);
     border: none; 
-    width: calc((100% - var(--x-gap) * 2) / 2);
-
 }
 
 .more {
     color: var(--color-white);
     background-color: var(--color-black);
     border: 1px solid var(--color-white);
-    width: calc((100% - var(--x-gap) * 2) / 2);
 }
 
 #background {
     background-image: url('../images/background.png');
+    background-size: cover;
 }
 
 .locations {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 10%;
     padding-bottom: 10%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: var(--x-gap);
 }
 
 .location {
     width: calc((100% - var(--x-gap) * 2) / 3);
-    height: 300px;
+    height: auto;
     background-color: var(--color-black);
     opacity: 85%;
-    padding-top: 1%;
-    padding-right: 2%;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -314,15 +311,13 @@ h3 {
     font-size: 26px;
     font-weight: 500;
     color: var(--color-white);
-    margin-left: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 15px;
 }
 
 .location-text {
     font-size: 24px;
     font-weight: 200;
     color: var(--color-orange);
-    margin-left: 10%;
 }
 
 .loc1 {
@@ -340,8 +335,7 @@ h3 {
     justify-content: flex-end;
     color: var(--color-white);
     font-size: 22px;
-    padding-left: 5%;
-    padding-bottom: 10%;
+    padding-top: 50px;
     gap: 10px;
     text-align: center;
 }
@@ -361,14 +355,16 @@ h3 {
 }
 
 .free {
-    width: calc(100% / 6);
+    width: calc(100% / 4);
     margin-top: 2%;
 }
 
 .rates {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: var(--y-gap) 0;
+    gap: 10px;
 }
 
 .rate-layer {
@@ -456,9 +452,11 @@ footer {
 
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: var(--y-gap);
     color: var(--color-white);
+    gap: calc(var(--x-gap) * 3);
 }
 
 .link{
@@ -473,22 +471,23 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc((100% - var(--x-gap)) / 2);   
+    width: calc((100% - var(--x-gap) * 2) / 2);   
 }
 
 .footer-contacts {
-    width: calc((100% - var(--x-gap) * 3) / 3);
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .footer-link {
-    width: calc((100% - var(--x-gap) * 3) / 4);
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    margin-left: calc(var(--x-gap) * 2);
 }
 
 .footer-title {
@@ -508,4 +507,63 @@ footer {
 }
 
 /*responsive design*/
+
+@media (max-width: 768px) {
+    html {
+        --y-gap: 80px;
+    }
+
+    #logo-text {
+        font-size: 34px;
+    }
+    
+    #logo-text span {
+        font-size: 20px;
+    }
+
+    .dance-style1, .dance-style2, .dance-style3, .dance-style4, .dance-style5, .dance-style6 {
+        width: calc((100% - var(--x-gap)) / 2);
+    }
+
+    .location, .rate1, .rate2, .rate3 {
+        width: 65%;
+    }
+
+    .free {
+        width: calc(100% / 3);
+    }   
+}
+
+@media (max-width: 400px){
+    
+    html {
+        --y-gap: 60px;
+        --x-gap: 10px;
+    }
+
+    #logo-text {
+        font-size: 26px;
+    }
+    
+    #logo-text span {
+        font-size: 16px;
+    }
+
+    .dance-style1, .dance-style2, .dance-style3, .dance-style4, .dance-style5, .dance-style6 {
+        width: 80%;
+        
+    }
+
+    .location, .rate1, .rate2, .rate3 {
+        width: 80%;
+    }
+
+    .free {
+        width: calc(100% / 3);
+    }
+     
+    .footer-address, .footer-phone {
+        font-size: 20px;
+    
+}
  
