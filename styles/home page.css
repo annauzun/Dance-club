@@ -99,6 +99,7 @@ a {
     position: absolute;
     background-color: rgba(16, 16, 16);
     opacity: 62%;
+    width: 70%;
     height: 100%;
     display: flex;
 }
@@ -508,6 +509,7 @@ footer {
 /*responsive design*/
 
 @media (max-width: 768px) {
+    
     html {
         --y-gap: 80px;
     }
@@ -552,6 +554,18 @@ footer {
         font-size: 16px;
     }
 
+    .layer {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 62px;
+    }
+
     .dance-style1, .dance-style2, .dance-style3, .dance-style4, .dance-style5, .dance-style6 {
         width: 80%;
         
@@ -561,14 +575,15 @@ footer {
         width: 80%;
     } 
      
+    .baner-title {
+        font-size: 34px;
+    }
+    
     .footer-address, .footer-phone {
         font-size: 20px;
     }
 
     .free {
         width: 50%;
-    }
-    
+    }    
 }
- 
-/*<a href="#" class="return-button">☰</a>*/
