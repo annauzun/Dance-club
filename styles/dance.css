@@ -224,6 +224,7 @@ ul {
 .dance-style4 {
     background-image: url('../images/pole_dance.png');
     background-size: cover;
+    background-position: center;
     width: 40%;
     height: 500px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    
@@ -240,6 +241,7 @@ ul {
 .ttitem {
     width: calc((100% - var(--x-gap)) / 2); 
     display: flex;
+    justify-content: space-between;
     border: 1px solid var(--color-orange);   
 }
 
@@ -252,15 +254,15 @@ ul {
 }
 
 .day {
-    width: calc(100% / 12 * 6);
+    width: 50%;
 }
 
 .time {
-    width: calc(100% / 12 * 2);
+    width: 20%;
 }
 
 .ttorange {
-    width: calc(100% / 12 * 4);
+    width: 30%;
     color: var(--color-white);
     background-color: var(--color-orange); 
 }
@@ -413,17 +415,42 @@ footer {
         background-position: 80%;
     }
 
-    .free {
-        width: 40%;
-    }   
+    .timetable {
+        justify-content: center;
+    }
 
-    .day {
-        width: calc(100% / 12 * 7);
+    .ttitem {
+        width: 90%;
+    }
+
+    .baner-title {
+        font-size: 36px;
     }
     
-    .time {
-        width: calc(100% / 12 * 3);
+}
+
+@media (max-width: 600px){
+
+    .dance-row {
+        flex-wrap: wrap;
     }
+
+    .dance-description {
+        width: 85%;
+    }
+
+    .dance-style4 {
+        width: 90%;
+    }
+
+    .free {
+        width: 50%;
+    }
+
+    .baner-title {
+        font-size: 34px;
+    }
+    
 }
 
 @media (max-width: 400px){
@@ -457,39 +484,12 @@ footer {
         top: 5%;
     }
 
-    .dance-row {
-        flex-wrap: wrap;
-    }
-
-    .dance-description {
-        width: 85%;
-    }
-
-    .dance-style4 {
-        width: 90%;
-    }
-
     .dance-text {
         font-size: 18px;
     }
-
-    .timetable {
-        justify-content: center;
-    }
-
-    .ttitem {
-        width: 90%;
-    }
-
-    .baner-title {
-        font-size: 34px;
-    }
-        
+    
     .footer-address, .footer-phone {
         font-size: 20px;
     }
-
-    .free {
-        width: 50%;
-    }  
+  
 }
