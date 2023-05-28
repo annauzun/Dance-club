@@ -362,7 +362,7 @@ h3 {
     margin-top: 2%;
 }
 
-.rates {
+#rates {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
