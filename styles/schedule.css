@@ -50,6 +50,10 @@ header {
     z-index: 10;
 }
 
+.header-mobile-version {
+    display: none;
+}
+
 a {
     color: var(--color-white);
     text-decoration: none;
@@ -97,8 +101,7 @@ a {
 
 .layer {
     position: absolute;
-    background-color: rgba(16, 16, 16);
-    opacity: 62%;
+    background-color: rgba(16, 16, 16, 0.31);
     width: 70%;
     height: 100%;
     display: flex;
@@ -400,12 +403,62 @@ footer {
         --y-gap: 80px;
     }
 
+    header {
+        display: none;
+    }
+
+    .header-mobile-version {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        background-color: rgba(18, 17, 17, 0.82);
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0px;
+        padding: 2% 4%;
+        z-index: 10;
+    }
+
     #logo-text {
         font-size: 34px;
     }
     
     #logo-text span {
         font-size: 20px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;       
+    }
+
+    #mobile-button {
+        background-color: var(--primary-color);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+    
+    #menu-icon {
+        width: 30px;
+        position: sticky;
+    }
+    
+    .mobile-navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(18, 17, 17, 0.82);
+        color: var(--color-white);
+        box-shadow: var(--shadow);
+        padding: 20px;   
+    }
+
+    .menu-text {
+        padding: 15px 15px 5px 15px;
+        border-bottom: 1px solid var(--color-white);
+        color: var(--color-white);
     }
 
     #hero {
