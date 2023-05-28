@@ -54,10 +54,6 @@ header {
     display: none;
 }
 
-.mobile-navigation {
-    display: none;
-}
-
 a {
     color: var(--color-white);
     text-decoration: none;
@@ -453,7 +449,7 @@ footer {
     }
     
     .mobile-navigation {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: rgba(18, 17, 17, 0.82);
