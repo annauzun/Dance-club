@@ -54,6 +54,10 @@ header {
     display: none;
 }
 
+.mobile-navigation {
+    display: none;
+}
+
 a {
     color: var(--color-white);
     text-decoration: none;
